@@ -32,12 +32,39 @@ function FooterLogo() {
   return (
     <div className="flex items-center gap-3">
       <svg width="34" height="30" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="7" width="23" height="23" rx="5.5" fill="#1e3a8a" />
-        <rect x="15" y="0" width="23" height="23" rx="5.5" fill="#00f0ff" />
-        <rect x="15" y="7" width="8" height="8" rx="1" fill="#1e3a8a" />
+        {/* Right/Top rounded square outline */}
+        <rect x="13" y="1" width="21" height="21" rx="5.5" stroke="#00f0ff" strokeWidth="4" fill="none" />
+        {/* Left/Bottom rounded square outline */}
+        <rect x="1" y="11" width="21" height="21" rx="5.5" stroke="#00f0ff" strokeWidth="4" fill="none" />
+        {/* Overlap fix to make them interlock: redraw the bottom-left corner of the right/top square */}
+        <path d="M 13 14 L 13 16.5 A 5.5 5.5 0 0 0 18.5 22 L 25 22" stroke="#00f0ff" strokeWidth="4" strokeLinecap="round" fill="none" />
       </svg>
       <div className="flex flex-col" style={{ gap: '1px' }}>
-        <span style={{ fontWeight: 900, fontSize: '13px', letterSpacing: '0.14em', color: '#ffffff', lineHeight: 1 }}>FORTEN</span>
+        <span style={{
+          fontWeight: 900,
+          fontSize: '13px',
+          letterSpacing: '0.14em',
+          color: '#ffffff',
+          lineHeight: 1,
+          display: 'inline-flex',
+          alignItems: 'center',
+        }}>
+          FORT
+          <span style={{
+            display: 'inline-flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '9px',
+            width: '8.5px',
+            margin: '0 1.5px',
+            transform: 'translateY(-0.5px)',
+          }}>
+            <span style={{ height: '1.6px', backgroundColor: '#ffffff', borderRadius: '9px' }} />
+            <span style={{ height: '1.6px', backgroundColor: '#ffffff', borderRadius: '9px' }} />
+            <span style={{ height: '1.6px', backgroundColor: '#ffffff', borderRadius: '9px' }} />
+          </span>
+          N
+        </span>
         <span style={{ fontWeight: 300, fontSize: '7.5px', letterSpacing: '0.38em', color: '#00f0ff', lineHeight: 1 }}>SOLUTIONS</span>
       </div>
     </div>

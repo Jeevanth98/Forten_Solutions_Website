@@ -24,8 +24,8 @@ export default function Toast({ show, onClose, message = 'Message sent! We\'ll r
             background: 'rgba(255, 255, 255, 0.95)',
             backdropFilter: 'blur(28px) saturate(180%)',
             WebkitBackdropFilter: 'blur(28px) saturate(180%)',
-            border: '1px solid rgba(0, 0, 204, 0.25)',
-            boxShadow: '0 8px 40px rgba(0, 0, 204, 0.08), inset 0 1px 0 rgba(255,255,255,0.9)',
+            border: '1px solid rgba(37, 99, 235, 0.25)',
+            boxShadow: '0 8px 40px rgba(37, 99, 235, 0.08), inset 0 1px 0 rgba(255,255,255,0.9)',
             minWidth: '280px',
             maxWidth: 'calc(100vw - 32px)',
           }}
@@ -36,7 +36,7 @@ export default function Toast({ show, onClose, message = 'Message sent! We\'ll r
             initial={{ width: '100%' }}
             animate={{ width: '0%' }}
             transition={{ duration: 4.4, ease: 'linear' }}
-            style={{ background: 'linear-gradient(to right, #0000cc, #0055ff)' }}
+            style={{ background: 'linear-gradient(to right, #2563eb, #4f46e5)' }}
           />
 
           <CheckCircle2 size={18} className="text-green-500 shrink-0" />

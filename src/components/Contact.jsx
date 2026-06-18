@@ -6,11 +6,11 @@ import Toast from './Toast';
 import { CONTACT_EMAIL, CONTACT_PHONES, CONTACT_LOCATION, CONTACT_MAPS_URL } from '../constants';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}`, color: '#0000cc' },
-  { icon: Phone, label: 'Phone', value: CONTACT_PHONES[0], href: `tel:${CONTACT_PHONES[0].replace(/\s/g, '')}`, color: '#0000cc', linkedin: 'https://www.linkedin.com/in/monish-k-018b8728a/' },
-  { icon: Phone, label: 'Phone', value: CONTACT_PHONES[1], href: `tel:${CONTACT_PHONES[1].replace(/\s/g, '')}`, color: '#0000cc', linkedin: 'https://www.linkedin.com/in/jeevanthsekar93/' },
-  { icon: Phone, label: 'Phone', value: CONTACT_PHONES[2], href: `tel:${CONTACT_PHONES[2].replace(/\s/g, '')}`, color: '#0000cc', linkedin: 'https://www.linkedin.com/in/sheldon-chanthiranath/' },
-  { icon: MapPin, label: 'Location', value: CONTACT_LOCATION, href: CONTACT_MAPS_URL, color: '#0000cc' },
+  { icon: Mail, label: 'Email', value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}`, color: '#2563eb' },
+  { icon: Phone, label: 'Phone', value: CONTACT_PHONES[0], href: `tel:${CONTACT_PHONES[0].replace(/\s/g, '')}`, color: '#2563eb', linkedin: 'https://www.linkedin.com/in/monish-k-018b8728a/' },
+  { icon: Phone, label: 'Phone', value: CONTACT_PHONES[1], href: `tel:${CONTACT_PHONES[1].replace(/\s/g, '')}`, color: '#2563eb', linkedin: 'https://www.linkedin.com/in/jeevanthsekar93/' },
+  { icon: Phone, label: 'Phone', value: CONTACT_PHONES[2], href: `tel:${CONTACT_PHONES[2].replace(/\s/g, '')}`, color: '#2563eb', linkedin: 'https://www.linkedin.com/in/sheldon-chanthiranath/' },
+  { icon: MapPin, label: 'Location', value: CONTACT_LOCATION, href: CONTACT_MAPS_URL, color: '#2563eb' },
 ];
 
 const services = [

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const techStack = [
   { name: 'React', color: '#61dafb' },
-  { name: 'Next.js', color: '#ffffff' },
+  { name: 'Next.js', color: '#0f172a' },
   { name: 'Node.js', color: '#68a063' },
   { name: 'Python', color: '#ffd43b' },
   { name: 'TypeScript', color: '#3178c6' },
@@ -13,7 +13,7 @@ const techStack = [
   { name: 'Supabase', color: '#3ecf8e' },
   { name: 'Docker', color: '#2496ed' },
   { name: 'AWS', color: '#ff9900' },
-  { name: 'Vercel', color: '#e2e8f0' },
+  { name: 'Vercel', color: '#09090b' },
   { name: 'LangGraph', color: '#10a37f' },
   { name: 'LangChain', color: '#60a5fa' },
   { name: 'TailwindCSS', color: '#38bdf8' },
@@ -37,11 +37,11 @@ function MarqueeTrack({ reverse = false }) {
         {items.map((tech, i) => (
           <div
             key={i}
-            className="group flex items-center gap-2.5 px-4 py-2 rounded-full whitespace-nowrap transition-all duration-300 hover:scale-105 cursor-default"
+            className="group flex items-center gap-2.5 px-4 py-2 rounded-full whitespace-nowrap transition-all duration-300 hover:scale-105 cursor-default shadow-sm"
             style={{
-              background: 'rgba(255,255,255,0.03)',
+              background: '#ffffff',
               border: `1px solid ${
-                tech.color === '#ffffff' || tech.color === '#e2e8f0' ? 'rgba(255,255,255,0.08)' : `${tech.color}25`
+                tech.color === '#0f172a' || tech.color === '#09090b' ? 'rgba(15,23,42,0.1)' : `${tech.color}35`
               }`,
             }}
           >
@@ -49,10 +49,9 @@ function MarqueeTrack({ reverse = false }) {
               className="w-2 h-2 rounded-full flex-shrink-0"
               style={{
                 background: tech.color,
-                boxShadow: `0 0 6px ${tech.color}60`,
               }}
             />
-            <span className="text-xs font-semibold text-white/70 group-hover:text-white transition-colors">
+            <span className="text-xs font-semibold text-slate-650 group-hover:text-slate-900 transition-colors">
               {tech.name}
             </span>
           </div>
@@ -67,11 +66,11 @@ function MarqueeTrack({ reverse = false }) {
         {items.map((tech, i) => (
           <div
             key={'b' + i}
-            className="group flex items-center gap-2.5 px-4 py-2 rounded-full whitespace-nowrap transition-all duration-300 hover:scale-105 cursor-default"
+            className="group flex items-center gap-2.5 px-4 py-2 rounded-full whitespace-nowrap transition-all duration-300 hover:scale-105 cursor-default shadow-sm"
             style={{
-              background: 'rgba(255,255,255,0.03)',
+              background: '#ffffff',
               border: `1px solid ${
-                tech.color === '#ffffff' || tech.color === '#e2e8f0' ? 'rgba(255,255,255,0.08)' : `${tech.color}25`
+                tech.color === '#0f172a' || tech.color === '#09090b' ? 'rgba(15,23,42,0.1)' : `${tech.color}35`
               }`,
             }}
           >
@@ -79,10 +78,9 @@ function MarqueeTrack({ reverse = false }) {
               className="w-2 h-2 rounded-full flex-shrink-0"
               style={{
                 background: tech.color,
-                boxShadow: `0 0 6px ${tech.color}60`,
               }}
             />
-            <span className="text-xs font-semibold text-white/70 group-hover:text-white transition-colors">
+            <span className="text-xs font-semibold text-slate-650 group-hover:text-slate-900 transition-colors">
               {tech.name}
             </span>
           </div>
@@ -96,14 +94,13 @@ export default function TechMarquee() {
   return (
     <section
       id="tech"
-      className="relative z-10 py-24 px-4 md:px-8 overflow-hidden"
-      style={{ background: '#050508' }}
+      className="relative z-10 py-24 px-4 md:px-8 overflow-hidden bg-slate-50/50"
     >
-      <div className="absolute inset-0 pointer-events-none opacity-5 cyber-grid" />
+      <div className="absolute inset-0 pointer-events-none opacity-20 dot-pattern" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="bento-tile p-8 md:p-12 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 cyber-grid pointer-events-none" />
+        <div className="bento-tile p-8 md:p-12 relative overflow-hidden bg-white border border-slate-200">
+          <div className="absolute inset-0 opacity-20 dot-pattern pointer-events-none" />
 
           {/* Title */}
           <motion.div
@@ -112,13 +109,13 @@ export default function TechMarquee() {
             viewport={{ once: true }}
             className="text-center mb-12 relative z-10"
           >
-            <span className="neon-text text-cyan-400 font-extrabold tracking-widest uppercase text-xs block mb-3">
-              [ integrations stack ]
-            </span>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white mb-4">
+            <div className="section-badge mb-3">
+              Integrations Stack
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 mb-4">
               Configured Ecosystem
             </h2>
-            <p className="text-xs md:text-sm text-white/50 leading-relaxed max-w-xl mx-auto">
+            <p className="text-xs md:text-sm text-slate-500 leading-relaxed max-w-xl mx-auto">
               Our products are engineered using standard, enterprise-ready platforms that guarantee performance.
             </p>
           </motion.div>
@@ -128,12 +125,12 @@ export default function TechMarquee() {
             {/* Left fade */}
             <div
               className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-              style={{ background: 'linear-gradient(to right, #0a0a0f, transparent)' }}
+              style={{ background: 'linear-gradient(to right, #ffffff, transparent)' }}
             />
             {/* Right fade */}
             <div
               className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-              style={{ background: 'linear-gradient(to left, #0a0a0f, transparent)' }}
+              style={{ background: 'linear-gradient(to left, #ffffff, transparent)' }}
             />
 
             <div className="flex flex-col gap-4">

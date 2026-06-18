@@ -55,7 +55,7 @@ export default function FAQ() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
               className="glass-card overflow-hidden transition-all duration-300"
-              style={{ borderColor: open === i ? 'rgba(0,0,204,0.3)' : 'rgba(0,0,0,0.08)' }}
+              style={{ borderColor: open === i ? 'rgba(37,99,235,0.3)' : 'rgba(0,0,0,0.08)' }}
             >
               <button
                 className="w-full flex items-center justify-between gap-4 p-6 text-left group"
@@ -68,13 +68,13 @@ export default function FAQ() {
                 <span
                   className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200"
                   style={{
-                    background: open === i ? 'rgba(0,0,204,0.1)' : 'rgba(0,0,0,0.04)',
-                    border: open === i ? '1px solid rgba(0,0,204,0.2)' : '1px solid rgba(0,0,0,0.08)',
+                    background: open === i ? 'rgba(37,99,235,0.1)' : 'rgba(0,0,0,0.04)',
+                    border: open === i ? '1px solid rgba(37,99,235,0.2)' : '1px solid rgba(0,0,0,0.08)',
                   }}
                 >
                   {open === i
-                    ? <Minus size={11} color="#0000cc" />
-                    : <Plus size={11} color="#0000cc" />}
+                    ? <Minus size={11} color="#2563eb" />
+                    : <Plus size={11} color="#2563eb" />}
                 </span>
               </button>
 

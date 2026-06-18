@@ -17,7 +17,7 @@ const cases = [
     solution: 'Engineered a unified e-commerce platform with a high-performance web dashboard and dedicated customer mobile applications.',
     impact: 'Successfully launched, driving over 500+ daily orders and reducing checkout delays by 60%.',
     tags: ['E-commerce', 'React Native', 'Node.js', 'PostgreSQL'],
-    color: '#00f0ff',
+    color: '#2563eb',
   },
   {
     category: 'AI Automation',
@@ -26,7 +26,7 @@ const cases = [
     solution: 'Built a cognitive LLM-powered support bot with product knowledge base, integrated with WhatsApp & email.',
     impact: 'Saved 6+ hours/day, response error rate reduced to <1%.',
     tags: ['LLMs', 'OpenAI API', 'WhatsApp API', 'Automation'],
-    color: '#a855f7',
+    color: '#7c3aed',
   },
   {
     category: 'Custom Software',
@@ -35,7 +35,7 @@ const cases = [
     solution: 'Full-stack SaaS with real-time inventory, auto reorders, and multi-location support.',
     impact: '100% real-time tracking, stockout incidents eliminated entirely.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
-    color: '#fbbf24',
+    color: '#d97706',
   },
 ];
 
@@ -62,19 +62,19 @@ export default function CaseStudies() {
   }, [activeId]);
 
   return (
-    <section id="case-studies" className="relative py-28 px-4 md:px-8 overflow-hidden" style={{ background: '#050508' }}>
-      <div className="absolute inset-0 pointer-events-none opacity-5 cyber-grid" />
+    <section id="case-studies" className="relative py-28 px-4 md:px-8 overflow-hidden bg-slate-50/50">
+      <div className="absolute inset-0 pointer-events-none opacity-20 dot-pattern" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="neon-text text-cyan-400 font-extrabold tracking-widest uppercase text-xs block mb-3">
-            [ corporate case studies ]
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-none">
+          <div className="section-badge mb-3">
+            Corporate Case Studies
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-none">
             Proven Business Outcomes
           </h2>
-          <p className="section-subtitle max-w-xl mx-auto text-xs md:text-sm text-white/50">
+          <p className="section-subtitle max-w-xl mx-auto text-xs md:text-sm">
             Real problems, custom engineered software architectures, and measured performance metrics.
           </p>
         </div>
@@ -92,8 +92,8 @@ export default function CaseStudies() {
                 onMouseLeave={() => setHoveredId(null)}
               >
                 {isThisActive ? (
-                  <div className="w-full h-full rounded-3xl border border-dashed border-cyan-400/20 bg-white/[0.02] flex flex-col items-center justify-center p-4">
-                    <span className="text-[10px] font-mono text-cyan-400/50 uppercase tracking-widest">
+                  <div className="w-full h-full rounded-3xl border border-dashed border-blue-200 bg-blue-50/10 flex flex-col items-center justify-center p-4">
+                    <span className="text-[10px] font-sans font-bold text-blue-500 uppercase tracking-widest">
                       File Active
                     </span>
                   </div>
@@ -103,20 +103,20 @@ export default function CaseStudies() {
                     onClick={() => setActiveId(idx)}
                     whileHover={{ scale: 1.03 }}
                     transition={{ type: 'spring', stiffness: 220, damping: 20 }}
-                    className="w-full h-full cursor-pointer bento-tile p-6 flex flex-col justify-between items-stretch overflow-hidden relative"
+                    className="w-full h-full cursor-pointer bento-tile p-6 flex flex-col justify-between items-stretch overflow-hidden relative bg-white border border-slate-200"
                   >
-                    <div className="absolute inset-0 opacity-10 cyber-grid pointer-events-none" />
+                    <div className="absolute inset-0 opacity-10 dot-pattern pointer-events-none" />
                     
                     {/* Radial Glow */}
                     <div
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full blur-[80px] pointer-events-none opacity-20"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full blur-[80px] pointer-events-none opacity-5"
                       style={{ backgroundColor: c.color }}
                     />
 
                     {/* Metadata Header */}
-                    <div className="flex justify-between items-center text-[9px] font-mono text-white/40">
-                      <span>CASE FILE // CONFIDENTIAL</span>
-                      <span>[ 0{idx + 1} ]</span>
+                    <div className="flex justify-between items-center text-[9px] font-sans font-bold text-slate-400 uppercase tracking-wider">
+                      <span>CASE STUDY</span>
+                      <span>0{idx + 1}</span>
                     </div>
 
                     {/* Content Core */}
@@ -127,18 +127,18 @@ export default function CaseStudies() {
                       >
                         <Sparkles size={16} style={{ color: c.color }} />
                       </div>
-                      <span className="text-[10px] font-extrabold uppercase tracking-widest text-cyan-400/80 mb-1">
+                      <span className="text-[10px] font-extrabold uppercase tracking-widest text-blue-600 mb-1">
                         {c.category}
                       </span>
-                      <h3 className="text-base font-extrabold text-white leading-tight">
+                      <h3 className="text-base font-extrabold text-slate-900 leading-tight">
                         {c.title}
                       </h3>
                     </div>
 
                     {/* Footer */}
-                    <div className="flex justify-between items-center text-[10px] text-white/30 pt-4 border-t border-white/5">
-                      <span>FS_DEPLOYMENT</span>
-                      <span className="flex items-center gap-1 text-cyan-400 font-bold">
+                    <div className="flex justify-between items-center text-[10px] text-slate-400 pt-4 border-t border-slate-100">
+                      <span>DEPLOYMENT SUCCESS</span>
+                      <span className="flex items-center gap-1 text-blue-650 font-bold hover:text-blue-700">
                         Analyze File <Eye size={12} />
                       </span>
                     </div>
@@ -152,7 +152,7 @@ export default function CaseStudies() {
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-30 bg-cyan-400 text-black text-[9px] font-extrabold tracking-widest uppercase px-4 py-2 rounded-full shadow-lg pointer-events-none flex items-center gap-1"
+                      className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-30 bg-blue-600 text-white text-[9px] font-extrabold tracking-widest uppercase px-4 py-2 rounded-full shadow-lg pointer-events-none flex items-center gap-1"
                     >
                       <span>Examine Case</span>
                       <ArrowRight size={10} />
@@ -171,7 +171,7 @@ export default function CaseStudies() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 md:p-8 cursor-pointer"
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-950/70 backdrop-blur-md p-4 md:p-8 cursor-pointer"
               onClick={() => setActiveId(null)}
             >
               {activeId === 0 ? (
@@ -183,40 +183,39 @@ export default function CaseStudies() {
                 >
                   {/* Left Column: Case details */}
                   <div 
-                    className="w-full md:w-[50%] bento-tile p-6 md:p-10 flex flex-col justify-between overflow-y-auto h-full scrollbar-thin"
-                    style={{ background: 'rgba(10, 10, 15, 0.95)', borderColor: 'rgba(0, 240, 255, 0.15)' }}
+                    className="w-full md:w-[50%] bento-tile p-6 md:p-10 flex flex-col justify-between overflow-y-auto h-full scrollbar-thin bg-white border border-slate-200 shadow-2xl rounded-2xl"
                   >
                     <div>
-                      <span className="text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/25 self-start">
+                      <span className="text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded bg-blue-50 text-blue-600 border border-blue-200 self-start">
                         {cases[0].category}
                       </span>
-                      <h3 className="text-2xl font-black text-white mt-4 mb-2">{cases[0].title}</h3>
-                      <p className="text-xs text-white/50 mb-6 font-mono">[ E-Commerce Deploy Schema ]</p>
+                      <h3 className="text-2xl font-black text-slate-900 mt-4 mb-2">{cases[0].title}</h3>
+                      <p className="text-xs text-slate-400 mb-6 font-sans font-semibold uppercase tracking-wider">E-Commerce Deployment Overview</p>
 
                       <div className="space-y-4">
-                        <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl">
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-white/40 block mb-1">Challenge</span>
-                          <p className="text-xs text-white/80 leading-relaxed">{cases[0].problem}</p>
+                        <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Challenge</span>
+                          <p className="text-xs text-slate-700 leading-relaxed">{cases[0].problem}</p>
                         </div>
 
-                        <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl">
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-white/40 block mb-1">Solution Blueprint</span>
-                          <p className="text-xs text-white/80 leading-relaxed">{cases[0].solution}</p>
+                        <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Solution Blueprint</span>
+                          <p className="text-xs text-slate-700 leading-relaxed">{cases[0].solution}</p>
                         </div>
 
-                        <div className="bg-cyan-500/5 border border-cyan-500/20 p-4 rounded-2xl">
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-400 block mb-1">Business Impact</span>
-                          <p className="text-xs text-white leading-relaxed font-bold">{cases[0].impact}</p>
+                        <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl">
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700 block mb-1">Business Impact</span>
+                          <p className="text-xs text-emerald-800 leading-relaxed font-bold">{cases[0].impact}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="mt-8 border-t border-white/5 pt-6 flex flex-col gap-4">
+                    <div className="mt-8 border-t border-slate-100 pt-6 flex flex-col gap-4">
                       <div>
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-white/40 block mb-2">Technologies Used</span>
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-slate-455 block mb-2">Technologies Used</span>
                         <div className="flex flex-wrap gap-1.5">
                           {cases[0].tags.map((tag) => (
-                            <span key={tag} className="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[10px] text-white/80 font-mono">
+                            <span key={tag} className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-[10px] text-slate-650 font-sans font-semibold">
                               {tag}
                             </span>
                           ))}
@@ -224,7 +223,7 @@ export default function CaseStudies() {
                       </div>
 
                       <div className="flex items-center justify-between mt-4">
-                        <span className="text-[11px] text-white/40">Deploy identical stack?</span>
+                        <span className="text-[11px] text-slate-500">Deploy identical stack?</span>
                         <a href="#contact" onClick={() => setActiveId(null)} className="btn-primary py-2 px-5 text-xs">
                           Brief Engineers →
                         </a>
@@ -233,11 +232,11 @@ export default function CaseStudies() {
                   </div>
 
                   {/* Right Column: Screenshot Carousel */}
-                  <div className="w-full md:w-[50%] bento-tile p-6 flex flex-col items-center justify-between h-full relative overflow-hidden bg-black/40">
-                    <div className="absolute inset-0 opacity-10 cyber-grid pointer-events-none" />
+                  <div className="w-full md:w-[50%] bento-tile p-6 flex flex-col items-center justify-between h-full relative overflow-hidden bg-slate-50 border border-slate-200 rounded-2xl">
+                    <div className="absolute inset-0 opacity-10 dot-pattern pointer-events-none" />
 
-                    <div className="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1 rounded-full text-[9px] font-mono text-white/70">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                    <div className="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-white border border-slate-200 px-3 py-1 rounded-full text-[9px] font-sans font-bold text-slate-500 shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
                       <span>Sitemap Mockup Display</span>
                     </div>
 
@@ -253,7 +252,7 @@ export default function CaseStudies() {
                         return (
                           <motion.div
                             key={imgIdx}
-                            className="absolute w-[240px] md:w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                            className="absolute w-[240px] md:w-[380px] rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white"
                             style={{ zIndex: zIdx }}
                             animate={{
                               x: translateX,
@@ -279,7 +278,7 @@ export default function CaseStudies() {
                           e.stopPropagation();
                           setTopIndex((p) => (p - 1 + 5) % 5);
                         }}
-                        className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white border border-white/10"
+                        className="p-3 rounded-full bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-sm transition-all"
                       >
                         <ChevronLeft size={16} />
                       </button>
@@ -288,7 +287,7 @@ export default function CaseStudies() {
                           e.stopPropagation();
                           setTopIndex((p) => (p + 1) % 5);
                         }}
-                        className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white border border-white/10"
+                        className="p-3 rounded-full bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-sm transition-all"
                       >
                         <ChevronRight size={16} />
                       </button>
@@ -299,8 +298,7 @@ export default function CaseStudies() {
                 /* Standard Modal for other cases */
                 <motion.div
                   layoutId={`card-${activeId}`}
-                  className="bento-tile p-6 md:p-10 max-w-xl w-full relative cursor-default"
-                  style={{ background: 'rgba(10, 10, 15, 0.95)', borderColor: 'rgba(0, 240, 255, 0.15)' }}
+                  className="bento-tile p-6 md:p-10 max-w-xl w-full relative cursor-default bg-white border border-slate-200 shadow-2xl rounded-2xl"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div
@@ -310,44 +308,44 @@ export default function CaseStudies() {
 
                   <div className="mt-2">
                     <span
-                      className="text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded bg-white/5 border border-white/10"
+                      className="text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded bg-slate-50 border border-slate-200"
                       style={{ color: cases[activeId].color }}
                     >
                       {cases[activeId].category}
                     </span>
 
-                    <h3 className="text-xl font-black text-white mt-4 mb-6">{cases[activeId].title}</h3>
+                    <h3 className="text-xl font-black text-slate-900 mt-4 mb-6">{cases[activeId].title}</h3>
 
                     <div className="space-y-4">
-                      <div className="bg-white/[0.02] border border-white/5 p-4 rounded-xl">
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-white/40 block mb-1">Challenge</span>
-                        <p className="text-xs text-white/80 leading-relaxed">{cases[activeId].problem}</p>
+                      <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Challenge</span>
+                        <p className="text-xs text-slate-700 leading-relaxed">{cases[activeId].problem}</p>
                       </div>
 
-                      <div className="bg-white/[0.02] border border-white/5 p-4 rounded-xl">
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-white/40 block mb-1">Solution</span>
-                        <p className="text-xs text-white/80 leading-relaxed">{cases[activeId].solution}</p>
+                      <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Solution</span>
+                        <p className="text-xs text-slate-700 leading-relaxed">{cases[activeId].solution}</p>
                       </div>
 
-                      <div className="bg-cyan-500/5 border border-cyan-500/20 p-4 rounded-xl">
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-400 block mb-1">Business Impact</span>
-                        <p className="text-xs text-white leading-relaxed font-bold">{cases[activeId].impact}</p>
+                      <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700 block mb-1">Business Impact</span>
+                        <p className="text-xs text-emerald-800 leading-relaxed font-bold">{cases[activeId].impact}</p>
                       </div>
                     </div>
 
-                    <div className="mt-6 border-t border-white/5 pt-6">
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-white/40 block mb-2">Stack Config</span>
+                    <div className="mt-6 border-t border-slate-100 pt-6">
+                      <span className="text-[9px] font-bold uppercase tracking-wider text-slate-455 block mb-2">Stack Config</span>
                       <div className="flex flex-wrap gap-1.5">
                         {cases[activeId].tags.map((tag) => (
-                          <span key={tag} className="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[10px] text-white/80 font-mono">
+                          <span key={tag} className="px-2.5 py-1 rounded bg-slate-50 border border-slate-200 text-[10px] text-slate-650 font-sans font-semibold">
                             {tag}
                           </span>
                         ))}
                       </div>
                     </div>
 
-                    <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between">
-                      <span className="text-[11px] text-white/40">Want similar results?</span>
+                    <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+                      <span className="text-[11px] text-slate-500">Want similar results?</span>
                       <a href="#contact" onClick={() => setActiveId(null)} className="btn-primary py-2 px-5 text-xs">
                         Discuss Project →
                       </a>
@@ -359,7 +357,7 @@ export default function CaseStudies() {
               {/* Close Button */}
               <button
                 onClick={() => setActiveId(null)}
-                className="absolute top-4 right-4 md:top-8 md:right-8 p-3 rounded-full bg-white/5 text-white/60 hover:text-white border border-white/10 backdrop-blur-md"
+                className="absolute top-4 right-4 md:top-8 md:right-8 p-3 rounded-full bg-white text-slate-650 hover:text-slate-900 border border-slate-200 hover:bg-slate-50 shadow-md backdrop-blur-md transition-all"
               >
                 <X size={16} />
               </button>
@@ -373,12 +371,11 @@ export default function CaseStudies() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-14 bento-tile p-8 md:flex items-center justify-between gap-6"
-          style={{ borderColor: 'rgba(0, 240, 255, 0.15)' }}
+          className="mt-14 bento-tile p-8 md:flex items-center justify-between gap-6 bg-white border border-slate-200"
         >
           <div>
-            <h3 className="text-lg font-bold text-white mb-1">Ready to be our next success story?</h3>
-            <p className="text-white/50 text-xs">Let's talk about your project and how we can deliver results like these.</p>
+            <h3 className="text-lg font-bold text-slate-800 mb-1">Ready to be our next success story?</h3>
+            <p className="text-slate-500 text-xs">Let's talk about your project and how we can deliver results like these.</p>
           </div>
           <a href="#contact" className="btn-primary mt-4 md:mt-0 whitespace-nowrap py-3 text-xs">
             Start a Project <ArrowRight size={14} />

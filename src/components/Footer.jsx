@@ -33,18 +33,18 @@ function FooterLogo() {
     <div className="flex items-center gap-3">
       <svg width="34" height="30" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Right/Top rounded square outline */}
-        <rect x="13" y="1" width="21" height="21" rx="5.5" stroke="#00f0ff" strokeWidth="4" fill="none" />
+        <rect x="13" y="1" width="21" height="21" rx="5.5" stroke="#2563eb" strokeWidth="4" fill="none" />
         {/* Left/Bottom rounded square outline */}
-        <rect x="1" y="11" width="21" height="21" rx="5.5" stroke="#00f0ff" strokeWidth="4" fill="none" />
+        <rect x="1" y="11" width="21" height="21" rx="5.5" stroke="#2563eb" strokeWidth="4" fill="none" />
         {/* Overlap fix to make them interlock: redraw the bottom-left corner of the right/top square */}
-        <path d="M 13 14 L 13 16.5 A 5.5 5.5 0 0 0 18.5 22 L 25 22" stroke="#00f0ff" strokeWidth="4" strokeLinecap="round" fill="none" />
+        <path d="M 13 14 L 13 16.5 A 5.5 5.5 0 0 0 18.5 22 L 25 22" stroke="#2563eb" strokeWidth="4" strokeLinecap="round" fill="none" />
       </svg>
       <div className="flex flex-col" style={{ gap: '1px' }}>
         <span style={{
           fontWeight: 900,
           fontSize: '13px',
           letterSpacing: '0.14em',
-          color: '#ffffff',
+          color: '#0f172a',
           lineHeight: 1,
           display: 'inline-flex',
           alignItems: 'center',
@@ -59,13 +59,13 @@ function FooterLogo() {
             margin: '0 1.5px',
             transform: 'translateY(-0.5px)',
           }}>
-            <span style={{ height: '1.6px', backgroundColor: '#ffffff', borderRadius: '9px' }} />
-            <span style={{ height: '1.6px', backgroundColor: '#ffffff', borderRadius: '9px' }} />
-            <span style={{ height: '1.6px', backgroundColor: '#ffffff', borderRadius: '9px' }} />
+            <span style={{ height: '1.6px', backgroundColor: '#0f172a', borderRadius: '9px' }} />
+            <span style={{ height: '1.6px', backgroundColor: '#0f172a', borderRadius: '9px' }} />
+            <span style={{ height: '1.6px', backgroundColor: '#0f172a', borderRadius: '9px' }} />
           </span>
           N
         </span>
-        <span style={{ fontWeight: 300, fontSize: '7.5px', letterSpacing: '0.38em', color: '#00f0ff', lineHeight: 1 }}>SOLUTIONS</span>
+        <span style={{ fontWeight: 300, fontSize: '7.5px', letterSpacing: '0.38em', color: '#2563eb', lineHeight: 1 }}>SOLUTIONS</span>
       </div>
     </div>
   );
@@ -76,16 +76,12 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative z-10"
-      style={{
-        background: '#050508',
-        borderTop: '1px solid rgba(255,255,255,0.06)',
-      }}
+      className="relative z-10 bg-white border-t border-slate-200"
     >
-      {/* Top cyan/violet accent line */}
+      {/* Top cobalt/violet accent line */}
       <div style={{
         height: '1px',
-        background: 'linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.4) 30%, rgba(124, 58, 237, 0.4) 50%, rgba(0, 240, 255, 0.4) 70%, transparent 100%)',
+        background: 'linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.2) 30%, rgba(124, 58, 237, 0.2) 50%, rgba(37, 99, 235, 0.2) 70%, transparent 100%)',
       }} />
 
       {/* Main footer grid */}
@@ -102,17 +98,17 @@ export default function Footer() {
           >
             <FooterLogo />
 
-            <p className="mt-5 text-xs md:text-sm leading-relaxed text-white/50 max-w-sm">
+            <p className="mt-5 text-xs md:text-sm leading-relaxed text-slate-500 max-w-sm">
               We build custom software, AI automations, and digital products that help businesses grow, scale, and lead.
             </p>
 
             {/* Tagline */}
             <div className="flex items-center gap-2 mt-4">
-              <span className="w-4 h-px bg-cyan-400" />
-              <span className="text-cyan-400 text-[10px] font-bold tracking-widest uppercase">
+              <span className="w-4 h-px bg-blue-600" />
+              <span className="text-blue-600 text-[10px] font-bold tracking-widest uppercase">
                 Committed to your success
               </span>
-              <span className="w-4 h-px bg-cyan-400" />
+              <span className="w-4 h-px bg-blue-600" />
             </div>
 
             {/* Contact info */}
@@ -125,10 +121,10 @@ export default function Footer() {
                 <a
                   key={text}
                   href={href}
-                  className="flex items-center gap-2.5 text-xs text-white/50 hover:text-white transition-colors decoration-none"
+                  className="flex items-center gap-2.5 text-xs text-slate-500 hover:text-slate-800 transition-colors decoration-none"
                   style={{ textDecoration: 'none' }}
                 >
-                  <Icon size={12} className="text-cyan-400 shrink-0" />
+                  <Icon size={12} className="text-blue-600 shrink-0" />
                   <span>{text}</span>
                 </a>
               ))}
@@ -145,7 +141,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="flex items-center justify-center w-8 h-8 rounded-lg border border-white/5 hover:border-cyan-400/30 bg-white/5 text-white/50 hover:text-cyan-400 transition-all"
+                  className="flex items-center justify-center w-8 h-8 rounded-lg border border-slate-250 hover:border-blue-300 bg-slate-50 text-slate-455 hover:text-blue-600 hover:bg-blue-50/50 transition-all"
                 >
                   <Icon size={14} />
                 </a>
@@ -162,7 +158,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * (colIdx + 1) }}
             >
-              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-cyan-400 mb-5">
+              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-blue-650 mb-5">
                 {category}
               </h4>
               <ul className="space-y-3">
@@ -170,10 +166,10 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-xs text-white/50 hover:text-white transition-colors flex items-center gap-1 group"
+                      className="text-xs text-slate-500 hover:text-slate-800 transition-colors flex items-center gap-1 group"
                       style={{ textDecoration: 'none' }}
                     >
-                      <span className="w-0 h-px bg-cyan-400 transition-all duration-300 group-hover:w-2" />
+                      <span className="w-0 h-px bg-blue-600 transition-all duration-300 group-hover:w-2" />
                       {link.label}
                     </a>
                   </li>
@@ -185,15 +181,15 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/5 bg-black/40">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/35">
+      <div className="border-t border-slate-100 bg-slate-50/50">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400 font-semibold">
           <p>© {year} Forten Solutions. All rights reserved.</p>
           <div className="flex items-center gap-6">
             {['Privacy Policy', 'Terms of Service'].map((item) => (
               <a
                 key={item}
                 href="#"
-                className="hover:text-white transition-colors"
+                className="hover:text-slate-700 transition-colors"
                 style={{ textDecoration: 'none' }}
               >
                 {item}

@@ -80,48 +80,48 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="contact" className="relative py-28 px-4 md:px-8 overflow-hidden" style={{ background: '#050508' }}>
-      <div className="absolute inset-0 pointer-events-none opacity-5 cyber-grid" />
+    <section id="contact" className="relative py-28 px-4 md:px-8 overflow-hidden bg-slate-50/50">
+      <div className="absolute inset-0 pointer-events-none opacity-20 dot-pattern" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* LEFT: Metadata Briefing panel (col-span-5) */}
-          <div className="lg:col-span-5 bento-tile p-8 md:p-10 flex flex-col justify-between min-h-[400px]">
-            <div className="absolute inset-0 opacity-10 cyber-grid pointer-events-none" />
+          <div className="lg:col-span-5 bento-tile p-8 md:p-10 flex flex-col justify-between min-h-[400px] bg-white border border-slate-200">
+            <div className="absolute inset-0 opacity-10 dot-pattern pointer-events-none" />
 
             <div>
-              <span className="neon-text text-cyan-400 font-extrabold tracking-widest uppercase text-xs block mb-3">
-                [ transmit inquiry ]
-              </span>
-              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-[1.05] mb-6">
+              <div className="section-badge mb-3">
+                Transmit Inquiry
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.05] mb-6">
                 Build the future with certainty.
               </h2>
-              <p className="text-xs md:text-sm text-white/55 leading-relaxed mb-8">
+              <p className="text-xs md:text-sm text-slate-500 leading-relaxed mb-8">
                 Every enterprise partnership begins with structured requirements. Tell us what modules you require, and we will initiate architectural reviews within 24 hours.
               </p>
 
               {/* Status metrics */}
-              <div className="space-y-4 border-t border-white/5 pt-6">
-                <div className="flex items-center gap-3 text-xs text-white/70">
-                  <Clock size={14} className="text-cyan-400" />
-                  <span>HQ Time: <b className="text-white font-mono">{time} IST</b></span>
+              <div className="space-y-4 border-t border-slate-100 pt-6">
+                <div className="flex items-center gap-3 text-xs text-slate-600">
+                  <Clock size={14} className="text-blue-600" />
+                  <span>HQ Time: <b className="text-slate-800 font-sans">{time} IST</b></span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-white/70">
-                  <ShieldCheck size={14} className="text-purple-400" />
-                  <span>Security: <b className="text-white">Mutual NDA Active on Request</b></span>
+                <div className="flex items-center gap-3 text-xs text-slate-600">
+                  <ShieldCheck size={14} className="text-purple-650" />
+                  <span>Security: <b className="text-slate-800">Mutual NDA Active on Request</b></span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-white/70">
-                  <Mail size={14} className="text-yellow-400" />
-                  <span>Primary: <b className="text-white">{CONTACT_EMAIL}</b></span>
+                <div className="flex items-center gap-3 text-xs text-slate-600">
+                  <Mail size={14} className="text-amber-600" />
+                  <span>Primary: <b className="text-slate-800 font-semibold">{CONTACT_EMAIL}</b></span>
                 </div>
               </div>
             </div>
 
             {/* Chips */}
             <div className="flex flex-wrap gap-2 mt-8">
-              {['< 24h SLA Response', 'Fixed-Price Contracts', 'Telemetry Reports'].map((c) => (
-                <span key={c} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[9px] font-semibold text-white/60">
+              {['< 24h SLA Response', 'Fixed-Price Contracts', 'Detailed Estimates'].map((c) => (
+                <span key={c} className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-[9px] font-bold text-slate-500 shadow-sm">
                   {c}
                 </span>
               ))}
@@ -129,8 +129,8 @@ export default function ContactCTA() {
           </div>
 
           {/* RIGHT: Console Form Panel (col-span-7) */}
-          <div className="lg:col-span-7 bento-tile p-6 md:p-10 relative">
-            <div className="absolute inset-0 opacity-10 cyber-grid pointer-events-none" />
+          <div className="lg:col-span-7 bento-tile p-6 md:p-10 relative bg-white border border-slate-200 shadow-sm">
+            <div className="absolute inset-0 opacity-10 dot-pattern pointer-events-none" />
 
             <AnimatePresence mode="wait">
               {submitted ? (
@@ -141,12 +141,12 @@ export default function ContactCTA() {
                   exit={{ opacity: 0 }}
                   className="h-full flex flex-col items-center justify-center text-center py-16"
                 >
-                  <div className="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mb-5 text-green-400">
+                  <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-250 flex items-center justify-center mb-5 text-emerald-600">
                     <CheckCircle2 size={32} />
                   </div>
-                  <h3 className="text-lg font-black text-white mb-2">Transmission Successful</h3>
-                  <p className="text-xs text-white/55 max-w-xs leading-relaxed mb-8">
-                    Your briefing packet has been catalogued. An engineer will coordinate contact within 24 hours.
+                  <h3 className="text-lg font-black text-slate-900 mb-2">Transmission Successful</h3>
+                  <p className="text-xs text-slate-500 max-w-xs leading-relaxed mb-8">
+                    Your briefing details have been received. Our team will contact you within 24 hours.
                   </p>
                   <button onClick={resetForm} className="btn-outline py-2.5 px-6 text-xs">
                     ← Transmit New Packet
@@ -158,26 +158,26 @@ export default function ContactCTA() {
                   onSubmit={handleSubmit}
                   className="space-y-5"
                 >
-                  <div className="border-b border-white/5 pb-3 mb-4 flex items-center justify-between">
-                    <span className="text-[10px] font-mono text-white/40 uppercase">Console Briefing Form</span>
-                    <span className="text-[9px] text-cyan-400 font-mono">* Required inputs</span>
+                  <div className="border-b border-slate-100 pb-3 mb-4 flex items-center justify-between">
+                    <span className="text-[10px] font-sans font-bold text-slate-400 uppercase tracking-widest">Project Inquiry Form</span>
+                    <span className="text-[9px] text-blue-600 font-sans font-bold">* Required inputs</span>
                   </div>
 
                   {/* Name & Email inputs side-by-side */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[9px] text-white/40 font-mono uppercase">Your Name *</label>
+                      <label className="text-[9px] text-slate-400 font-sans font-bold uppercase tracking-wide">Your Name *</label>
                       <input
                         name="name"
                         value={form.name}
                         onChange={handleChange}
                         required
                         placeholder="John Doe"
-                        className="w-full bg-black/60 border border-white/10 hover:border-white/20 focus:border-cyan-400 rounded-xl px-4 py-3 text-xs text-white outline-none transition-all"
+                        className="w-full bg-white border border-slate-200 hover:border-slate-350 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-xs text-slate-800 outline-none transition-all"
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[9px] text-white/40 font-mono uppercase">Email Address *</label>
+                      <label className="text-[9px] text-slate-400 font-sans font-bold uppercase tracking-wide">Email Address *</label>
                       <input
                         name="email"
                         type="email"
@@ -185,7 +185,7 @@ export default function ContactCTA() {
                         onChange={handleChange}
                         required
                         placeholder="john@example.com"
-                        className="w-full bg-black/60 border border-white/10 hover:border-white/20 focus:border-cyan-400 rounded-xl px-4 py-3 text-xs text-white outline-none transition-all"
+                        className="w-full bg-white border border-slate-200 hover:border-slate-350 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-xs text-slate-800 outline-none transition-all"
                       />
                     </div>
                   </div>
@@ -193,28 +193,28 @@ export default function ContactCTA() {
                   {/* Phone & Hear About Us */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[9px] text-white/40 font-mono uppercase">Phone (with country code)</label>
+                      <label className="text-[9px] text-slate-400 font-sans font-bold uppercase tracking-wide">Phone (with country code)</label>
                       <input
                         name="phone"
                         type="tel"
                         value={form.phone}
                         onChange={handleChange}
                         placeholder="+91 98765 43210"
-                        className="w-full bg-black/60 border border-white/10 hover:border-white/20 focus:border-cyan-400 rounded-xl px-4 py-3 text-xs text-white outline-none transition-all"
+                        className="w-full bg-white border border-slate-200 hover:border-slate-350 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-xs text-slate-800 outline-none transition-all"
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[9px] text-white/40 font-mono uppercase">How did you hear about us?</label>
+                      <label className="text-[9px] text-slate-400 font-sans font-bold uppercase tracking-wide">How did you hear about us?</label>
                       <div className="flex flex-wrap gap-1.5 mt-1">
                         {HEAR_OPTIONS.map((opt) => (
                           <button
                             type="button"
                             key={opt}
                             onClick={() => selectOption('source', opt)}
-                            className={`px-3 py-1.5 rounded-lg text-[10px] font-semibold border transition-all duration-300 ${
+                            className={`px-3 py-1.5 rounded-lg text-[10px] font-bold border transition-all duration-300 ${
                               form.source === opt 
-                                ? 'bg-cyan-500/10 border-cyan-400/30 text-cyan-400' 
-                                : 'border-white/5 bg-white/[0.01] text-white/60 hover:text-white hover:bg-white/[0.02]'
+                                ? 'bg-blue-50 border-blue-200 text-blue-600 shadow-sm' 
+                                : 'border-slate-200 bg-white text-slate-500 hover:text-slate-800 hover:bg-slate-50 hover:border-slate-300'
                             }`}
                           >
                             {opt}
@@ -226,7 +226,7 @@ export default function ContactCTA() {
 
                   {/* Service Needed Selection */}
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[9px] text-white/40 font-mono uppercase">Select Service Type *</label>
+                    <label className="text-[9px] text-slate-400 font-sans font-bold uppercase tracking-wide">Select Service Type *</label>
                     <div className="flex flex-wrap gap-2">
                       {SERVICE_OPTIONS.map((svc) => (
                         <button
@@ -235,8 +235,8 @@ export default function ContactCTA() {
                           onClick={() => selectOption('service', svc)}
                           className={`px-3 py-2 rounded-xl text-[10px] font-bold border transition-all duration-300 ${
                             form.service === svc 
-                              ? 'bg-cyan-500/10 border-cyan-400/30 text-cyan-400' 
-                              : 'border-white/5 bg-white/[0.01] text-white/60 hover:text-white hover:bg-white/[0.02]'
+                              ? 'bg-blue-50 border-blue-200 text-blue-600 shadow-sm' 
+                              : 'border-slate-200 bg-white text-slate-500 hover:text-slate-800 hover:bg-slate-50 hover:border-slate-300'
                           }`}
                         >
                           {svc}
@@ -247,7 +247,7 @@ export default function ContactCTA() {
 
                   {/* Message */}
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-[9px] text-white/40 font-mono uppercase">Project Brief *</label>
+                    <label className="text-[9px] text-slate-400 font-sans font-bold uppercase tracking-wide">Project Brief *</label>
                     <textarea
                       name="message"
                       value={form.message}
@@ -255,13 +255,13 @@ export default function ContactCTA() {
                       required
                       rows={4}
                       placeholder="Outline details, features, integration complexity, or timeline specifications..."
-                      className="w-full bg-black/60 border border-white/10 hover:border-white/20 focus:border-cyan-400 rounded-xl px-4 py-3 text-xs text-white outline-none transition-all resize-none"
+                      className="w-full bg-white border border-slate-200 hover:border-slate-350 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-xs text-slate-800 outline-none transition-all resize-none"
                     />
                   </div>
 
                   {/* Error diagnostics */}
                   {sendError && (
-                    <div className="flex items-start gap-2 p-3 bg-red-500/10 border border-red-500/20 text-red-400 text-xs rounded-xl">
+                    <div className="flex items-start gap-2 p-3 bg-red-50 border border-red-200 text-red-650 text-xs rounded-xl">
                       <AlertCircle size={14} className="shrink-0 mt-0.5" />
                       <span>{sendError}</span>
                     </div>
@@ -277,11 +277,11 @@ export default function ContactCTA() {
                       {loading ? (
                         <span className="flex items-center gap-2">
                           <span className="w-3.5 h-3.5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
-                          Transmitting packet logs...
+                          Transmitting details...
                         </span>
                       ) : (
                         <span className="flex items-center gap-1.5">
-                          Transmit Briefing Packet <Send size={12} />
+                          Submit Inquiry <Send size={12} />
                         </span>
                       )}
                     </button>

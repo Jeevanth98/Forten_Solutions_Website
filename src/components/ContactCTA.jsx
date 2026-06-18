@@ -66,17 +66,17 @@ export default function ContactCTA() {
     <section
       id="contact"
       className="relative z-10 overflow-hidden"
-      style={{ minHeight: 520 }}
+      style={{ minHeight: 640 }}
     >
-      <div className="flex flex-col lg:flex-row" style={{ minHeight: 520 }}>
+      <div className="flex flex-col lg:flex-row" style={{ minHeight: 640 }}>
 
         {/* ── LEFT PANEL — always visible blue CTA ── */}
         <div
-          className="relative flex flex-col justify-center px-10 md:px-16 py-16 lg:py-20"
+          className="relative flex flex-col justify-center px-10 md:px-16 py-20 lg:py-24"
           style={{
             background: 'linear-gradient(135deg, #000099 0%, #0000cc 55%, #0018ff 100%)',
             flex: '0 0 44%',
-            minHeight: 400,
+            minHeight: 500,
           }}
         >
           {/* Subtle dot grid overlay */}
@@ -106,15 +106,15 @@ export default function ContactCTA() {
 
             {/* Headline */}
             <h2
-              className="font-black text-white leading-[1.06] mb-4"
-              style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)' }}
+              className="font-black text-white leading-[1.04] mb-5"
+              style={{ fontSize: 'clamp(2.5rem, 4.2vw, 3.8rem)' }}
             >
               Build the future<br />with certainty.
             </h2>
 
             {/* Sub */}
             <p
-              className="text-[15px] leading-relaxed mb-10"
+              className="text-base md:text-[17px] leading-relaxed mb-12 opacity-90"
               style={{ color: 'rgba(219,234,254,0.75)' }}
             >
               Every outcome starts with a conversation. Tell us what you're building and we'll respond within 24 hours.
@@ -123,11 +123,11 @@ export default function ContactCTA() {
             {/* CTA button */}
             <motion.button
               onClick={() => setFormOpen(true)}
-              className="flex items-center gap-3 group"
+              className="flex items-center gap-4 group"
               whileHover="hover"
             >
               <span
-                className="text-[15px] font-semibold text-white"
+                className="text-lg md:text-xl font-bold text-white"
                 style={{ letterSpacing: '-0.01em' }}
               >
                 Let's talk
@@ -135,18 +135,18 @@ export default function ContactCTA() {
               <motion.div
                 variants={{ hover: { scale: 1.12, x: 3 } }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                className="w-9 h-9 rounded-full flex items-center justify-center"
+                className="w-11 h-11 rounded-full flex items-center justify-center"
                 style={{
                   background: 'rgba(255,255,255,0.15)',
                   border: '1.5px solid rgba(255,255,255,0.4)',
                 }}
               >
-                <ArrowRight size={16} color="white" />
+                <ArrowRight size={18} color="white" />
               </motion.div>
             </motion.button>
 
             {/* Trust chips */}
-            <div className="flex flex-wrap gap-2 mt-10">
+            <div className="flex flex-wrap gap-2 mt-12">
               {['< 24h response', 'Fixed-price contracts', 'NDA on request'].map((chip) => (
                 <span
                   key={chip}
@@ -165,7 +165,7 @@ export default function ContactCTA() {
         </div>
 
         {/* ── RIGHT PANEL — photo base + sliding form overlay ── */}
-        <div className="relative flex-1 overflow-hidden" style={{ minHeight: 400 }}>
+        <div className="relative flex-1 overflow-hidden" style={{ minHeight: 500 }}>
           {/* Background photo — always present */}
           <img
             src="/team-meeting.png"

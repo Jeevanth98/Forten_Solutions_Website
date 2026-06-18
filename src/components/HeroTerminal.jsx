@@ -26,7 +26,7 @@ export default function HeroTerminal() {
 
       {/* Removed Aurora Orb and all glow effects */}
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col gap-16 justify-start py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto lg:-translate-x-12 xl:-translate-x-20 flex flex-col gap-16 justify-start py-20">
 
         {/* LEFT COLUMN */}
         <div className="flex flex-col gap-8 max-w-2xl">
